@@ -8,6 +8,7 @@
   <script type="text/javascript" src="<c:url value="/css/Semantic/jquery-3.3.1.js" />"></script>
   <link type="text/css" rel="stylesheet" href="<c:url value="/css/Semantic/semantic.min.css" />" />
   <script type="text/javascript" src="<c:url value="/css/Semantic/semantic.min.js" />"></script>
+  <link type="text/css" rel="stylesheet" href="<c:url value="/css/common.css" />" />
   <title></title>
 </head>
 <body>
