@@ -1,0 +1,154 @@
+
+/* font-style */
+@font-face {
+    font-family: nanumFontKR, Arial, sans-serif;
+    src: url('./fonts/NanumSquareNeoOTF-Bd.otf')
+}
+
+body *{ font-family: 'nanumFontKR', sans-serif; !important; }
+
+
+/* container-list ============================================================================= */
+/*
+2 equal parts */
+div.OY_UI_Container {
+    /*margin: 2px; */
+}
+
+div.OY_UI_Container.two.parts {
+    width: 100%;
+    height: 600px;
+}
+
+div.OY_UI_Container.two.parts.right {
+    width:50%;
+    position: relative;
+    float: right;
+}
+
+div.OY_UI_Container.two.parts.left {
+    width:50%;
+    position: relative;
+    float: left;
+}
+
+/*div.OY_UI_Container.two.parts.child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: dashed 1px black;
+}*/
+
+div.OY_UI_Container.three.parts {
+    width: 100%;
+    height: 400px;
+}
+
+/*div.OY_UI_Grid title {
+    font-size: 30px;
+}*/
+
+/* table-list========================================================================= */
+
+div.OY_UI_Grid {
+    border: 3px solid #000000;
+    width: auto;
+    height: auto;
+    text-align: left;
+    border-collapse: collapse;
+}
+div.OY_UI_Grid .OY_UI_Cell, .div.OY_UI_Grid .OY_UI_Column {
+    border: 1px solid #000000;
+    padding: 5px 4px;
+    height: 20px;
+}
+div.OY_UI_Grid .OY_UI_Body .OY_UI_Cell {
+    font-size: 13px;
+}
+div.OY_UI_Grid .OY_UI_Head {
+    background: #CFCFCF;
+    background: -moz-linear-gradient(top, #76c8ff 0%, #76c8ff 66%, #76c8ff 100%);
+    background: -webkit-linear-gradient(top, #76c8ff 0%, #76c8ff 66%, #76c8ff 100%);
+    background: linear-gradient(to bottom, #76c8ff 0%, #76c8ff 66%, #76c8ff 100%);
+    border-bottom: 3px solid #000000;
+}
+div.OY_UI_Grid .OY_UI_Head .OY_UI_Column {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    border: 1px solid #000000;
+}
+div.OY_UI_Grid .footStyle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    border-top: 3px solid #000000;
+}
+div.OY_UI_Grid .footStyle {
+    font-size: 14px;
+}
+div.OY_UI_Grid{ display: table; }
+div.OY_UI_Rows { display: table-row; height: 10px; !important;}
+div.OY_UI_Head { display: table-header-group;}
+div.OY_UI_Cell, .OY_UI_Column { display: table-cell;}
+div.OY_UI_Head { display: table-header-group;}
+div.OY_UI_Body { display: table-row-group;}
+div.OY_UI_Foot { display: table-footer-group;}
+
+
+/* button-list ============================================================================= */
+button.btn {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: auto;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+button.btn:hover { background-color: #E0ECF8; transition: 0.7s; }
+button.btn:focus {
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 5px #F8E0E6 ;
+    transition: 0.7s;
+}
+
+/* color button */
+button.btn.red { background-color: #FF0000; }
+button.btn.blue { background-color: #0000FF; }
+button.btn.green { background-color: #00FF00; }
+button.btn.gray { background-color: #BDBDBD; }
+button.btn.cherryBlossom { background-color: #F5A9A9; }
+button.btn.blueSky { background-color: #58ACFA; }
+button.btn.violetPurple { background-color: #BE81F7; }
+
+/* button image */
+button.btn.img {
+    font-size: 0px; !important;
+    width: 30px; !important;
+    height: 30px; !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+button.btn.img.search { background-image: url("./oy-images/saveIcon.png"); }
+button.btn.img.cancel { background-image: url("./oy-images/cancelIcon.png"); }
+button.btn.save {}
+button.btn.update {}
+/* button-list ============================================================================= */
+
+
+
+
+
+
+
+
+
+
+
+
