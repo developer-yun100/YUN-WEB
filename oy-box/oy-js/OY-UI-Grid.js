@@ -1,15 +1,30 @@
 
+var gridVer = '0.1';
+var gridLicense = '';
+
+/* item.js가 먼저 read하고 이 후 grid가 read한다. */
+window.addEventListener('load', function() {
+    console.log("Grid Load !! ");
+});
+
 function activeOptionCheck(activeOption, jsonValue){
     let htmlValue = '';
     switch (activeOption){
         case "inputField" :
-            htmlValue += '<input type="text" value="'+jsonValue+'"/>'
+            // '<input type="text" value="'+jsonValue+'"/>'
+            htmlValue += '<div class="OY_UI_input">'+jsonValue+'</div>';
             break;
         case "dateField" :
             htmlValue += ''+jsonValue;
             break;
         case "checkBox" :
-            htmlValue += ''+jsonValue;
+            htmlValue += '<div class="OY_UI_checkBox">';
+            if(jsonValue == 1){
+                htmlValue += '<input type="checkbox" class="OY_UI_checkBox check" checked/>';
+            } else {
+                htmlValue += '<input type="checkbox" class="OY_UI_checkBox check"/>';
+            }
+            htmlValue += '</div>';
             break;
     }
     return htmlValue;
@@ -90,7 +105,10 @@ const OYGrid = {
                                 htmlValue += jsonValue;
                             }
 
-                            styleEffect += '"';
+                            if(styleEffect != "" && styleEffect != null){
+                                styleEffect += '"';
+                            }
+
                             html += '<div data-rowkey="'+countKey+'" data-index="'+i+'" class="OY_UI_Cell" '+styleEffect+'>'+htmlValue+'</div>';
                             countKey++;
                         }
@@ -102,8 +120,8 @@ const OYGrid = {
             }
         html += '</div>';
 
-        if(option.rowAction != null && option.rowAction != ""){
-            if(option.rowAction == "footField"){
+        if(option.rowFootField != null && option.rowFootField != ""){
+            if(option.rowFootField == "rowFootField"){
                 html += '<div class="OY_UI_Foot footStyle">';
                     html += '<div class="OY_UI_Rows">';
                     for(let i = 0; i < option.column.length; i++){

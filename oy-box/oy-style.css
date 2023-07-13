@@ -89,13 +89,70 @@ div.OY_UI_Grid .footStyle {
 div.OY_UI_Grid .footStyle {
     font-size: 14px;
 }
-div.OY_UI_Grid{ display: table; }
+div.OY_UI_Grid { display: table; }
 div.OY_UI_Rows { display: table-row; height: 10px; !important;}
 div.OY_UI_Head { display: table-header-group;}
 div.OY_UI_Cell, .OY_UI_Column { display: table-cell;}
 div.OY_UI_Head { display: table-header-group;}
 div.OY_UI_Body { display: table-row-group;}
 div.OY_UI_Foot { display: table-footer-group;}
+
+/* div input형 */
+div.OY_UI_input {
+    width: auto;
+    height: auto;
+    outline: 0px;
+    border: 1px solid #000000;
+}
+
+div.OY_UI_input:focus{
+    background-color: #F8E0E6; transition: 0.7s;
+}
+
+/* div input형 */
+div.OY_UI_WebInput {
+    width: 370px;
+    height: 25px;
+    outline: 0px;
+    border: 3px solid #000000;
+    border-radius: 8px;
+}
+
+div.OY_UI_WebInput:focus{
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 6px #76c8ff ;
+    transition: 0.7s;
+
+}
+
+label.OY_UI_WebLabel{
+    position: relative;
+    top: 0;
+    /*margin: -55px;*/
+    font-size: 15px;
+    color: #000000;
+    font-weight: bold;
+}
+
+div.OY_UI_checkBox {
+    width: 25px;
+    height: 25px;
+    margin : 0 auto;
+}
+input[type="checkbox"]{
+    display: none;
+}
+input.OY_UI_checkBox.check{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border:2px solid #707070;
+    position: relative;
+}
+input.OY_UI_checkBox.check:checked{
+    box-shadow: 0 0 0 2px #76c8ff;
+}
 
 
 /* button-list ============================================================================= */
@@ -113,7 +170,7 @@ button.btn:hover { background-color: #E0ECF8; transition: 0.7s; }
 button.btn:focus {
     outline-color: transparent;
     outline-style: solid;
-    box-shadow: 0 0 0 5px #F8E0E6 ;
+    box-shadow: 0 0 0 4px #000000 ;
     transition: 0.7s;
 }
 
@@ -129,8 +186,8 @@ button.btn.violetPurple { background-color: #BE81F7; }
 /* button image */
 button.btn.img {
     font-size: 0px; !important;
-    width: 30px; !important;
-    height: 30px; !important;
+    width: 25px; !important;
+    height: 25px; !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -139,15 +196,87 @@ button.btn.img.search { background-image: url("./oy-images/saveIcon.png"); }
 button.btn.img.cancel { background-image: url("./oy-images/cancelIcon.png"); }
 button.btn.save {}
 button.btn.update {}
+button.OY_UI_Simple.memBtn {
+    background-color:#2E64FE;
+    height: 35px;
+    width: 100px;
+    font-size: 15px;
+    color: #FFFFFF;
+    border: none;
+}
 /* button-list ============================================================================= */
 
 
+/* loding bar */
+div.OY_UI_Loding_Mask {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 0.6;
+    background: #e4e4e4;
+    z-index: 99;
+    text-align: center;
+    margin: 0 auto;
+}
+img.OY_UI_Loding_Mask.img {
+    /*background-image: url("./oy-images/loding.gif"); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    margin-top: 400px;
+    /*margin: 0 auto;*/
+}
 
+@keyframes blink-effect {
+    50% {
+        opacity: 0;
+    }
+}
 
+label.OY_UI_blink {
+    animation: blink-effect 1s step-end infinite;
+}
 
+/* form =========================================================== */
 
+div.OY_UI_login_Form {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    margin: auto;
+/*    background-color: #F90;*/
+}
+.OY_UI_login_Form.top{
+    background-color: #FFFFFF;
+    height: 30%;
+    position: relative;
+}
+.OY_UI_login_Form.top.h2{
+    color: #002ead;
+    text-align: center;
+}
+.OY_UI_login_Form.center{
+    background-color: #FFFFFF;
+    height: 50%;
+    position: relative;
+}
+.OY_UI_login_Form.bottom{
+    background-color: #FFFFFF;
+    height: 20%;
+    position: relative;
+    top: -15px;
+}
+.OY_UI_login_Form.bottom.down{
 
+}
 
+.OY_UI_login_Form.input {
+
+}
 
 
 
